@@ -8,7 +8,7 @@ def NuevoDiaYValorAlpine(ultimoValor,cambio24Horas):
 
 
 
-def CalcularCrecimientoEstimadoReales(inversionInicial:float, valorInicialCriptomoneda:float,rango24Cambio:tuple, diasACalcular:int):
+def CalcularCrecimientoEstimadoReal(inversionInicial:float, valorInicialCriptomoneda:float,rango24Cambio:tuple, diasACalcular:int):
     
     print(f"Empezamos en el dia 0 con ${round(inversionInicial*valorInicialCriptomoneda,2)} Dolares.")
     subio=False
@@ -44,7 +44,11 @@ def CalcularGananciasEstimado(valorInicial, gananciaPromedioPorcent, diasACalcul
 
 
 def main():
-    ganancias=CalcularCrecimientoEstimadoReales(51,9.35,(-7,11),7)
+    # cryptosActuales=float(input("Ingrese su inversion actual de criptomonedas! ->>  "))
+    # valorCryptoActual =float(input("Cuál es el precio en dolares de la criptomoneda en este momento? ->> "))
+    # print("---------------------------------------------------------------------------")
+    # ganancias=CalcularCrecimientoEstimadoReal(cryptosActuales,valorCryptoActual,(-7,15),7)
+    ganancias=CalcularGananciasEstimado(38.59,7,14)
 
     print(f"Tus dolares generados fueron de ${ganancias}!!")
 
